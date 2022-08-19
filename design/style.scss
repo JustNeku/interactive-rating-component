@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+$orange: hsl(25, 97%, 53%);
+
+$container-light: #242a34;
+$container-dark: #171e28;
+
+$font-size: 15px;
+$font-family: 'Poppins', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $very-dark-blue;
+    font-family: $font-family;
+    font-size: $font-size;
+
+    height: 100vh;
+
+}
+
+.hide-element {
+    display: none;
+}
+
+.center {
+    width: calc(100% - 3rem);
+    height: 100%;
+    margin-inline: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 410px;
+    padding: 2rem;
+    margin-inline: auto;
+
+    color: $light-grey;
+    background: radial-gradient(circle at top center, $container-light 0%, $container-dark 100%);
+
+    border-radius: 2rem;
+    box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.3);
+
+    .star {
+        padding: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        border-radius: 50%;
+        background-color: $dark-blue;
+        box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.2);
+    }
+
+    h1 {
+        color: $white;
+        font-size: 1.75rem;
+        margin: 0.6rem 0;
+        font-weight: 400;
+    }
+    p {
+        line-height: 1.5rem;
+    }
+
+    form {
+        width: 100%;
+        margin-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .ratings {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            input[type="radio"]{
+                display: none;
+            }
+
+            label {
+                width: 3rem;
+                height: 3rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                border-radius: 50%;
+                background-color: $dark-blue;
+                box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.2);
+
+                &:hover {
+                    background-color: $orange;
+                    color: $white;
+                }
+            }
+
+            input[type="radio"]:checked + label {
+                background-color: $light-grey;
+                color: $white;
+                box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.2);
+            }
+        }
+
+        button {
+            text-transform: uppercase;
+            color: $white;
+            background-color: $orange;
+            border: none;
+            border-radius: 1.5rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $font-size;
+            font-family: $font-family;
+            letter-spacing: 3px;
+
+            &:hover {
+                color: $orange;
+                background-color: $white;
+            }
+        }
+    }
+
+
+    
+}
+#thankyou-page {
+    text-align: center;
+
+    .rating-selected{
+        color: $orange;
+        background-color: $dark-blue;
+        width: fit-content;
+        padding: 0.3rem 1.3rem;
+        border-radius: 1.15rem;
+
+        margin: 1.5rem auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        border-radius: 1rem;
+    }    
+}

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(216deg, 12%, 8%);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  height: 100vh;
+}
+
+.hide-element {
+  display: none;
+}
+
+.center {
+  width: calc(100% - 3rem);
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 410px;
+  padding: 2rem;
+  margin-inline: auto;
+  color: hsl(217deg, 12%, 63%);
+  background: radial-gradient(circle at top center, #242a34 0%, #171e28 100%);
+  border-radius: 2rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.container .star {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 18%);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.container h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.75rem;
+  margin: 0.6rem 0;
+  font-weight: 400;
+}
+.container p {
+  line-height: 1.5rem;
+}
+.container form {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container form .ratings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container form .ratings input[type=radio] {
+  display: none;
+}
+.container form .ratings label {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 18%);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.container form .ratings label:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+.container form .ratings input[type=radio]:checked + label {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.container form button {
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(25deg, 97%, 53%);
+  border: none;
+  border-radius: 1.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 3px;
+}
+.container form button:hover {
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+#thankyou-page {
+  text-align: center;
+}
+#thankyou-page .rating-selected {
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(213deg, 19%, 18%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.3rem 1.3rem;
+  border-radius: 1.15rem;
+  margin: 1.5rem auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    border-radius: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
